@@ -6,7 +6,15 @@ const cors = require('cors');
 const app = express();
 const port = process.env.PORT || 8000;
 
-app.use(cors());
+
+app.use(
+  cors({
+    origin: 'http://localhost:3000',
+    methods: ['GET', 'POST'],
+    credentials: true,
+  })
+);
+
 app.use(express.json());
 
 mongoose.connect(process.env.DB_CONNECTION_URL, {
@@ -30,7 +38,7 @@ const returnRoutes = require('./routes/returnRoutes');
 app.use('/api', authRoutes);
 app.use('/api/book', bookRoutes);
 app.use('/api/borrow', borrowRoutes);
-app.use('/api/return',returnRoutes);
+app.use('/api/return', returnRoutes);
 
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);

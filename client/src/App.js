@@ -5,7 +5,8 @@ import Home from './pages/Home';
 import Account from './pages/Account';
 import Borrow from './pages/Borrow';
 import Return from './pages/Return';
-
+import axios from 'axios';
+axios.defaults.baseURL = 'http://localhost:8000';
 function App() {
   return (
     <div>
@@ -13,9 +14,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/home" element={<Home />} />
-          <Route path ="/borrow" element = {<Borrow/>}/>
-          <Route path="/create" element= {<Account/>}/>
-          <Route path="/return" element = {<Return/>}/>
+          <Route path="/borrow" element={<Borrow />} />
+          <Route path="/create" element={<Account />} />
+          <Route path="/return" element={<Return />} />
         </Routes>
       </BrowserRouter>
     </div>

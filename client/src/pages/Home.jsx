@@ -104,7 +104,7 @@ const Home = () => {
     <div className="d-flex">
       <Sidebar />
       <div className="container" style={{ height: '100vh' }}>
-      <br/><br/>
+        <br /><br />
         <div className="row">
           <div className="col">
             <Button color="primary" onClick={toggleModal}>
@@ -151,7 +151,7 @@ const Home = () => {
           <form onSubmit={handleSubmit}>
             <div>
               <label>Book Title:</label>
-              <input type="text" className="form-control" value={data.booktitle} onChange={(e) => setData({ ...data, booktitle: e.target.value })} required/>
+              <input type="text" className="form-control" value={data.booktitle} onChange={(e) => setData({ ...data, booktitle: e.target.value })} required />
             </div>
             <div>
               <label>Book Categories:</label>
@@ -181,16 +181,16 @@ const Home = () => {
 
             <div>
               <label>Quantity</label>
-              <input type="number" min={0} className="form-control" value={data.quantity} onChange={(e) => setData({ ...data, quantity: e.target.value })} required/>
+              <input type="number" min={0} className="form-control" value={data.quantity} onChange={(e) => setData({ ...data, quantity: e.target.value })} required />
             </div>
             <div>
               <label>Left</label>
-              <input type="number" min={0} className="form-control" value={data.left} onChange={(e) => setData({ ...data, left: e.target.value })} required/>
+              <input type="number" min={0} className="form-control" value={data.left} onChange={(e) => setData({ ...data, left: e.target.value })} required />
             </div>
-            <br/>
+            <br />
             <div className='flex'>
-            <Button color="secondary" onClick={toggleModal}  style={{ marginRight: '5px' }}>Close</Button>
-            <Button color="primary" style={{ width: '65px' }}>Save</Button>
+              <Button color="secondary" onClick={toggleModal} style={{ marginRight: '5px' }}>Close</Button>
+              <Button color="primary" style={{ width: '65px' }}>Save</Button>
             </div>
           </form>
         </ModalBody>

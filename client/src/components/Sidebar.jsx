@@ -6,7 +6,7 @@ const Sidebar = () => {
   return (
     <div className="d-flex flex-column flex-shrink-0 p-3 text-bg-dark" style={{ width: '280px' }}>
       <div className="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-        <svg className="bi pe-none me-2" width="40" height="32"><use xlinkHref="#bootstrap"/></svg>
+        <svg className="bi pe-none me-2" width="40" height="32"><use xlinkHref="/path/to/symbol" /></svg>
         <span className="fs-4 font-weight-bold">BOOK BUDDY</span>
       </div>
       <hr />
@@ -38,17 +38,16 @@ const Sidebar = () => {
       </ul>
       <hr />
       <div className="dropdown">
-        <a href="#" className="d-flex align-items-center text-white text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+        <p className="d-flex align-items-center text-white text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
           <strong>admin</strong>
-        </a>
-        
+        </p>
+
         <ul className="dropdown-menu dropdown-menu-dark text-small shadow">
-        <NavLink to="/" className="nav-link text-white">
           <li>
-            
-            Sign out
-            </li>
+            <NavLink to="/" className="nav-link text-white">
+              Sign out
             </NavLink>
+          </li>
         </ul>
       </div>
     </div>
